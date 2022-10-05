@@ -9,9 +9,9 @@
 import Foundation
 
 class LogConsole {
-    var log = "";
-    
-    func register(value:String){
+    var log = ""
+
+    func register(value: String) {
         self.log += "\n\(value)"
         NSLog(value)
     }

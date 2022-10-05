@@ -10,17 +10,17 @@ import Foundation
 import ReSwift
 @testable import ReSwiftMiddleware
 
-struct MiddlewareLogger : MiddlewareExecutor{
-    
-    let logger:LogConsole;
-    
-    init(logger:LogConsole) {
-        self.logger = logger;
+struct MiddlewareLogger: MiddlewareExecutor {
+
+    let logger: LogConsole
+
+    init(logger: LogConsole) {
+        self.logger = logger
     }
-    
-    func execute(action: Action, getState: @escaping () -> StateType?, dispatch: @escaping DispatchFunction) -> Action? {
-        
-        if let counterAction = action as? CounterActions{
+
+    func execute(action: Action, getState: @escaping () -> Any?, dispatch: @escaping DispatchFunction) -> Action? {
+
+        if let counterAction = action as? CounterActions {
             self.logger.register(value: counterAction.toString())
         }
 

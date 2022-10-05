@@ -9,6 +9,6 @@
 import Foundation
 import ReSwift
 
-struct CounterState : StateType{
-    var count = 0;
+struct CounterState {
+    var count = 0
 }

@@ -8,18 +8,18 @@
 
 import ReSwift
 
-open class MiddlewaresCollection<T: StateType>{
+open class MiddlewaresCollection<T> {
     public private(set) var middlewares: [Middleware<T>]
 
     public init() {
         self.middlewares = []
     }
-    
+
     public func concact(withCollection collection: MiddlewaresCollection) -> MiddlewaresCollection {
         self.middlewares.append(contentsOf: collection.middlewares)
         return self
     }
-    
+
     public func add(_ middlewareItems: MiddlewareExecutor...) -> MiddlewaresCollection {
         for item in middlewareItems {
             self.middlewares.append { (dispatch, state) -> (@escaping DispatchFunction) -> DispatchFunction in
@@ -32,7 +32,7 @@ open class MiddlewaresCollection<T: StateType>{
                 }
             }
         }
-        
+
         return self
     }
 }

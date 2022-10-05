@@ -9,7 +9,7 @@
 import Foundation
 
 extension CounterActions {
-    func toString()->String{
+    func toString() -> String {
         switch self {
         case .increment(let value):
             return "[Increment \(value)]"

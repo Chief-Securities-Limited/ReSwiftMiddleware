@@ -9,7 +9,7 @@
 import Foundation
 import ReSwift
 
-enum CounterActions : Action{
+enum CounterActions: Action {
     case increment(Int)
     case decrement(Int)
 }

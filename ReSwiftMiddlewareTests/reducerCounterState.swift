@@ -9,7 +9,7 @@
 import Foundation
 import ReSwift
 
-func reducerCounterState(action:Action, state:CounterState?) -> CounterState{
+func reducerCounterState(action: Action, state: CounterState?) -> CounterState {
     let state = state ?? CounterState()
 
     guard let action = action as? CounterActions else {
