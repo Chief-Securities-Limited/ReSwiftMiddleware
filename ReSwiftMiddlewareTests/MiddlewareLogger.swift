@@ -8,6 +8,7 @@
 
 import Foundation
 import ReSwift
+@testable import ReSwiftMiddleware
 
 struct MiddlewareLogger : MiddlewareExecutor{
     

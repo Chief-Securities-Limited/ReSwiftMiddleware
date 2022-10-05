@@ -8,7 +8,7 @@
 
 import XCTest
 import ReSwift
-
+@testable import ReSwiftMiddleware
 class MiddlewareCollectionTests: XCTestCase {
 
     func testUsingMiddlewareLoggerAfterSendActionShouldRegisterLog() {
